@@ -1,0 +1,11 @@
+// 다음 C언어 프로그램이 실행되었을 때의 결과는?
+
+#include <stdio.h>
+int main(int argc, char *argv[ ]) {
+  char a;
+  a = 'A' + 1;
+  printf("%d", a);
+  return 0; 
+}
+
+// 답 : 66
