@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 // struct st라는 이름의 구조체를 정의합니다.
+
 struct st {
     int a;                     // 정수형 변수 a
     int c[10];                 // 크기가 10인 정수형 배열 c
@@ -40,3 +41,6 @@ int main(int argc, char* argv[]) {
 
     return 0;
 }
+
+
+      //    60
