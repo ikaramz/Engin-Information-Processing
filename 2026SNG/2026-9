@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+// struct st라는 이름의 구조체를 정의합니다.
+struct st {
+    int a;                     // 정수형 변수 a
+    int c[10];                 // 크기가 10인 정수형 배열 c
+};
+
+int main(int argc, char* argv[]) {
+    int i = 0;                // 반복문 제어 변수 i 선언 및 초기화
+    struct st ob1;            // 구조체 변수 ob1 선언
+    struct st ob2;            // 구조체 변수 ob2 선언
+
+    ob1.a = 0;                // ob1의 멤버 변수 a를 0으로 초기화
+    ob2.a = 0;                // ob2의 멤버 변수 a를 0으로 초기화
+
+    /* [첫 번째 for문] 배열 요소 채우기 (i는 0부터 9까지 1씩 증가)
+       - ob1.c[i]에는 i 값이 그대로 들어갑니다.
+       - ob2.c[i]에는 (ob1.c[i] 값) + i 가 들어가므로 결과적으로 i + i = 2 * i 가 됩니다.
+    */
+    
+    for (i = 0; i < 10; i++) {
+        ob1.c[i] = i;
+        ob2.c[i] = ob1.c[i] + i; 
+    }
+
+    /* [두 번째 for문] 값 누적하기 (i = i + 2 이므로 0, 2, 4, 6, 8 짝수 인덱스만 접근)
+       - ob1.a에는 ob1.c[0], ob1.c[2], ob1.c[4], ob1.c[6], ob1.c[8] 값이 더해집니다.
+       - ob2.a에는 ob2.c[0], ob2.c[2], ob2.c[4], ob2.c[6], ob2.c[8] 값이 더해집니다.
+    */
+    
+    for (i = 0; i < 10; i = i + 2) {
+        ob1.a = ob1.a + ob1.c[i];
+        ob2.a = ob2.a + ob2.c[i];
+    }
+
+    // 최종적으로 ob1.a와 ob2.a의 합을 출력합니다.
+    
+    printf("%d", ob1.a + ob2.a);
+
+    return 0;
+}
