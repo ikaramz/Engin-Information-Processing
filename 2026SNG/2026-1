@@ -16,6 +16,7 @@ int main(int argc, char* argv[]) {
     strcat(str1, str2); // str1 뒤에 str2 연결 (str1: "KVREALOVA")
 
     // 포인터(주소)에 정수를 더하는 올바른 연산으로 수정
+
     printf("%c", *(p1 + 3)); 
 
     return 0;
