@@ -1,0 +1,21 @@
+public class array1 {
+    public static void main(String[] args) {
+        int cnt = 0;
+
+        // do-while 문은 조건과 상관없이 최소 1번은 실행됩니다.
+        do {
+                                          // 1. 초기값 0에서 1 증가하여 cnt는 1이 됩니다.
+            cnt++; 
+        } while (cnt < 0);                // 2. 1 < 0은 거짓(false)이므로 반복문을 종료합니다.
+
+                                          // 3. 현재 cnt 값은 1입니다.
+        if(cnt == 1) {
+                                          // 4. 조건이 참이므로 cnt를 1 증가시킵니다. (cnt는 2가 됨)
+            cnt++;
+        } else {
+            cnt = cnt + 3;
+        }
+                                  
+        System.out.printf("%d", cnt);     // 5. 최종 결과값인 2를 출력합니다.
+    }
+}
