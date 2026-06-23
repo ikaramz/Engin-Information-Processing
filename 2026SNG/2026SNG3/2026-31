@@ -1,6 +1,19 @@
-#
-#
-#
-#
-#
-#
+# 'FourCal'이라는 이름의 클래스를 정의합니다.
+
+class FourCal:                                # 객체의 속성을 설정하는 메서드입니다.
+
+    def setdata(self, fir, sec):              # self는 생성된 객체 자신을 의미하며, fir와 sec은 전달받을 값입니다.
+        self.fir = fir                        # 객체의 fir 속성에 전달받은 값을 저장합니다.
+        self.sec = sec                        # 객체의 sec 속성에 전달받은 값을 저장합니다.
+
+    def add(self):                            # 저장된 두 값을 더하는 메서드입니다.
+        result = self.fir + self.sec          # 객체에 저장된 두 속성 값을 더합니다.
+        return result                         # 더한 결과값을 반환합니다.
+
+a = FourCal()                                 # FourCal 클래스로부터 'a'라는 이름의 객체(인스턴스)를 생성합니다.
+
+a.setdata(4, 2)                               # a 객체의 setdata 메서드를 호출하여 4와 2를 각각 fir와 sec에 저장합니다.
+
+print(a.add())                                # a 객체의 add 메서드를 호출하여 저장된 값을 더한 결과를 출력합니다.
+
+                                              # 결과적으로 4 + 2의 값인 6이 화면에 출력됩니다.
