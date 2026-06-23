@@ -1,3 +1,5 @@
+#Python
+
 # 'FourCal'이라는 이름의 클래스를 정의합니다.
 
 class FourCal:                                # 객체의 속성을 설정하는 메서드입니다.
